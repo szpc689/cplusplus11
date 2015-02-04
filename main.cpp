@@ -7,5 +7,11 @@ using namespace HCPP;
 int main(int argc, char** argv) {
 	HPoint pt(1,2);
 	std::cout<<pt;
+	
+//	HRect rect(1,2,3,4);
+//	std::cout<<rect;
+	HRect rect{1,2,3,4};
+	std::cout<<rect;
+	
 	return 0;
 }

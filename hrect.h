@@ -40,8 +40,28 @@ std::ostream& operator<< (std::ostream& obj, const HPoint& pt);
 class HRect
 {
 	public:
-	protected:
+		HRect() = delete; // 删除默认构造函数
+		HRect(int x, int y, int with, int hight):_point(x, y),_with(with),_hight(hight){} 
+		HRect(const HPoint& pt, int with, int hight):_point(pt),_with(with),_hight(hight){} 
+		
+		void setPoint(const HPoint& pt);
+		HPoint getPoint() const;
+		
+		void setWith(int with);
+		int getWith() const;
+		
+		void setHight(int hight);
+		int getHight() const;
+	private:
+		HPoint _point;
+		int _with;
+		int _hight;
 };
+
+// 重载 << 支持HPoint
+std::ostream& operator<< (std::ostream& obj, const HRect& pt); 
+
+
 
 }
 

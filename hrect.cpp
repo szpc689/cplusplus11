@@ -26,6 +26,39 @@ std::ostream& operator<< (std::ostream& obj, const HPoint& pt)
 }
 
 
+void HRect::setPoint(const HPoint& pt)
+{
+	_point = pt;
+}
+HPoint HRect::getPoint() const
+{
+	return _point;
+}
+		
+void HRect::setWith(int with)
+{
+	_with = with;
+}
+int HRect::getWith() const
+{
+	return _with;
+}
+		
+void HRect::setHight(int hight)
+{
+	_hight = hight;
+}
+int HRect::getHight() const
+{
+	return _hight;
+}
+
+
+std::ostream& operator<< (std::ostream& obj, const HRect& rect)
+{
+	obj<<"HRect: "<<&rect<<" (Point: "<<rect.getPoint()<<" with: "<<rect.getWith()<<" hight: "<<rect.getHight()<<")" <<std::endl;
+}
+
 
 }
 
