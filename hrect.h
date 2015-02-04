@@ -52,6 +52,11 @@ class HRect
 		
 		void setHight(int hight);
 		int getHight() const;
+		
+		operator HPoint() 
+		{
+			return _point;
+		}
 	private:
 		HPoint _point;
 		int _with;

@@ -13,5 +13,8 @@ int main(int argc, char** argv) {
 	HRect rect{1,2,3,4};
 	std::cout<<rect;
 	
+	HPoint pointFromRect = rect;
+	std::cout<<pointFromRect;
+	
 	return 0;
 }
