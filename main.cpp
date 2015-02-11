@@ -16,5 +16,13 @@ int main(int argc, char** argv) {
 	HPoint pointFromRect = rect;
 	std::cout<<pointFromRect;
 	
+	HPoint pt1 = pt;
+	std::cout<<"pt1 : "<<pt1<<std::endl;
+	HPoint pt2;
+	pt2 = pt;
+	std::cout<<"pt2 : "<<pt2<<std::endl;
+	std::cout<<"pt1 + pt2 = "<<pt1 + pt2<<std::endl;
+	
+	
 	return 0;
 }

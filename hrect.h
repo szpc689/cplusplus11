@@ -21,6 +21,11 @@ class HPoint
 		HPoint():_x(0),_y(0){}
 		HPoint(int x, int y):_x(x), _y(y){}
 		
+		// 拷贝构造 
+		HPoint(const HPoint& obj);
+		// 赋值拷贝 
+		HPoint& operator=(const HPoint& obj);
+		
 		// X 坐标轴 
 		void setX(int x);
 		int getX() const;
@@ -28,6 +33,9 @@ class HPoint
 		// y 坐标轴
 		void setY(int y);
 		int getY() const; 
+		
+		// 声明友元函数 
+		friend HPoint operator+(const HPoint& left, const HPoint& right);
 		
 	private:
 		int _x;

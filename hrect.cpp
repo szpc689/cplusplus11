@@ -1,6 +1,23 @@
 #include "hrect.h"
 namespace HCPP {
 	
+HPoint::HPoint(const HPoint& obj)
+{
+	this->_x = obj._x;
+	this->_y = obj._y;
+}
+
+HPoint& HPoint::operator=(const HPoint& obj)
+{
+	if (this == &obj)
+	{
+		return *this;
+	}
+	
+	this->_x = obj._x;
+	this->_y = obj._y;
+}
+	
 void HPoint::setX(int x)
 {
 	this->_x = x;
@@ -17,6 +34,11 @@ void HPoint::setY(int y)
 int HPoint::getY() const
 {
 	return this->_y;
+} 
+
+HPoint operator+(const HPoint& left, const HPoint& right)
+{
+	return HPoint(left._x + right._x, left._y + right._y);
 }
 
 std::ostream& operator<< (std::ostream& obj, const HPoint& pt)
